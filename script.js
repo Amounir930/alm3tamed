@@ -223,57 +223,5 @@ document.addEventListener("DOMContentLoaded", () => {
         goToSlide(nextSlide);
     }, 6000);
 
-    /* 8. CONTACT FORM SUBMISSION TO WHATSAPP
-       ========================================================================== */
-    const contactForm = document.getElementById("booking-contact-form");
-    const inputName = document.getElementById("form-name");
-    const inputPhone = document.getElementById("form-phone");
-    const errorName = document.getElementById("error-name");
-    const errorPhone = document.getElementById("error-phone");
 
-    contactForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        
-        let isValid = true;
-
-        if (inputName.value.trim().length < 3) {
-            errorName.classList.add("visible");
-            isValid = false;
-        } else {
-            errorName.classList.remove("visible");
-        }
-
-        const qatariPhoneRegex = /^[34567][0-9]{7}$/;
-        const cleanPhone = inputPhone.value.trim().replace(/\s+/g, '');
-        if (!qatariPhoneRegex.test(cleanPhone)) {
-            errorPhone.classList.add("visible");
-            isValid = false;
-        } else {
-            errorPhone.classList.remove("visible");
-        }
-
-        if (isValid) {
-            const name = inputName.value.trim();
-            const date = document.getElementById("form-date").value || "غير محدد";
-            const location = document.getElementById("form-location").value.trim() || "غير محدد";
-            const extraDetails = document.getElementById("form-details").value.trim() || "لا يوجد تفاصيل إضافية";
-            const phoneNumber = "97455262988";
-
-            const contactMessage = `السلام عليكم ورحمة الله وبركاته،
-
-لقد قمت بإرسال طلب استفسار جديد عبر موقع المعتمد:
-👤 الاسم الكريم: ${name}
-📞 رقم الجوال القطري: ${cleanPhone}
-📅 تاريخ المناسبة المطلوب: ${date}
-📍 منطقة التركيب: ${location}
-📝 تفاصيل إضافية: ${extraDetails}
-
-يرجى الاتصال بي لتوفير الأسعار المعتمدة والتجهيزات المتاحة.`;
-
-            const encodedContactMessage = encodeURIComponent(contactMessage);
-            const whatsappContactUrl = `https://wa.me/${phoneNumber}?text=${encodedContactMessage}`;
-
-            window.open(whatsappContactUrl, "_blank");
-        }
-    });
 });
