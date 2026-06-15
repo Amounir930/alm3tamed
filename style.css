@@ -185,19 +185,25 @@ img {
 }
 
 /* Logo styling */
-.logo-link {
+.logo-link, .footer-brand-col .logo-area {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 6px;
+    text-align: center;
 }
 
 .logo-img-file {
-    height: 52px;
+    height: 76px; /* Larger logo size as requested */
     width: auto;
     object-fit: contain;
     border-radius: var(--radius-sm);
     filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.25));
     transition: var(--transition-smooth);
+}
+
+.site-header.sticky .logo-img-file {
+    height: 60px; /* Slightly smaller when header is sticky */
 }
 
 .logo-link:hover .logo-img-file {
@@ -222,20 +228,15 @@ img {
 .logo-text {
     display: flex;
     flex-direction: column;
-}
-
-.brand-title {
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: var(--text-primary);
-    letter-spacing: 0.5px;
+    align-items: center;
 }
 
 .brand-subtitle {
-    font-size: 0.72rem;
-    color: var(--gold-primary);
-    font-weight: 400;
-    margin-top: -3px;
+    font-size: 0.82rem; /* Slightly larger for better readability */
+    color: #ffffff; /* Converted to white color as requested */
+    font-weight: 600;
+    margin-top: 2px;
+    letter-spacing: 0.5px;
 }
 
 /* Nav Menu */
@@ -734,290 +735,7 @@ img {
     right: 0;
 }
 
-/* 9. ESTIMATOR SECTION
-   ========================================================================== */
-.estimator-section {
-    padding: 100px 24px;
-    position: relative;
-    background: radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.05) 0%, rgba(0, 0, 0, 0) 60%);
-}
 
-.estimator-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 40px;
-    max-width: 1280px;
-    margin: 0 auto;
-}
-
-.estimator-form-card {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border-glass);
-    padding: 40px;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-premium);
-}
-
-.estimator-form-title {
-    font-size: 1.8rem;
-    margin: 16px 0 8px;
-}
-
-.estimator-form-desc {
-    color: var(--text-secondary);
-    margin-bottom: 30px;
-}
-
-.input-group {
-    margin-bottom: 28px;
-}
-
-.input-label {
-    display: block;
-    font-weight: 700;
-    font-size: 0.95rem;
-    color: var(--gold-primary);
-    margin-bottom: 12px;
-}
-
-/* Radio Group */
-.custom-radio-group {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-    gap: 12px;
-}
-
-.radio-label {
-    cursor: pointer;
-}
-
-.radio-label input {
-    display: none;
-}
-
-.radio-span {
-    display: block;
-    background: var(--bg-primary);
-    border: 1px solid var(--border-glass);
-    border-radius: var(--radius-sm);
-    padding: 12px;
-    text-align: center;
-    font-size: 0.88rem;
-    font-weight: 700;
-    transition: var(--transition-smooth);
-}
-
-.radio-label input:checked + .radio-span {
-    border-color: var(--gold-primary);
-    background: rgba(212, 175, 55, 0.08);
-    color: var(--gold-primary);
-    box-shadow: 0 0 10px rgba(212, 175, 55, 0.1);
-}
-
-/* Slider Style */
-.slider-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 8px;
-}
-
-.slider-val {
-    font-weight: 700;
-    color: var(--text-primary);
-    background: rgba(255, 255, 255, 0.06);
-    padding: 2px 10px;
-    border-radius: 4px;
-    font-size: 0.85rem;
-}
-
-.range-slider {
-    width: 100%;
-    -webkit-appearance: none;
-    height: 6px;
-    border-radius: 5px;
-    background: var(--bg-primary);
-    outline: none;
-}
-
-.range-slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: var(--gold-primary);
-    cursor: pointer;
-    box-shadow: 0 0 8px var(--gold-glow);
-    transition: var(--transition-smooth);
-}
-
-.range-slider::-webkit-slider-thumb:hover {
-    transform: scale(1.2);
-}
-
-/* Select Style */
-.custom-select {
-    width: 100%;
-    background: var(--bg-primary);
-    color: var(--text-primary);
-    border: 1px solid var(--border-glass);
-    padding: 14px;
-    border-radius: var(--radius-sm);
-    font-family: inherit;
-    font-size: 0.9rem;
-    outline: none;
-}
-
-.custom-select:focus {
-    border-color: var(--gold-primary);
-}
-
-/* Checkbox Grid */
-.checkbox-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 12px;
-}
-
-.checkbox-label {
-    cursor: pointer;
-}
-
-.checkbox-label input {
-    display: none;
-}
-
-.checkbox-span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    background: var(--bg-primary);
-    border: 1px solid var(--border-glass);
-    border-radius: var(--radius-sm);
-    padding: 12px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    transition: var(--transition-smooth);
-}
-
-.checkbox-label input:checked + .checkbox-span {
-    border-color: var(--gold-primary);
-    background: rgba(212, 175, 55, 0.08);
-    color: var(--gold-primary);
-}
-
-/* Estimator Results Card (Glassmorphism Gold Glow) */
-.estimator-results-card {
-    background: linear-gradient(135deg, rgba(20, 20, 25, 0.9) 0%, rgba(10, 10, 12, 0.95) 100%);
-    border: 1px solid var(--border-gold);
-    box-shadow: var(--shadow-gold), var(--shadow-premium);
-    border-radius: var(--radius-lg);
-    padding: 40px;
-    position: sticky;
-    top: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    backdrop-filter: blur(15px);
-}
-
-.results-header {
-    border-bottom: 1px solid var(--border-gold);
-    padding-bottom: 20px;
-    margin-bottom: 24px;
-}
-
-.results-header h3 {
-    font-size: 1.5rem;
-    margin-bottom: 6px;
-    color: var(--gold-primary);
-}
-
-.results-header p {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-}
-
-.results-body {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    flex-grow: 1;
-}
-
-.result-item {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.result-label {
-    font-size: 0.82rem;
-    color: var(--text-muted);
-    font-weight: 700;
-}
-
-.result-value {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: var(--text-primary);
-}
-
-.price-item {
-    border-top: 1px dashed rgba(255, 255, 255, 0.1);
-    padding-top: 20px;
-}
-
-.price-value-container {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.price-value {
-    font-size: 2rem;
-    font-weight: 900;
-    color: var(--gold-primary);
-}
-
-.price-note {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-}
-
-.btn-whatsapp-booking {
-    width: 100%;
-    background: #25d366; /* WhatsApp official green */
-    color: #fff;
-    font-size: 1.05rem;
-    font-weight: 700;
-    padding: 14px 24px;
-    border: none;
-    border-radius: var(--radius-sm);
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    transition: var(--transition-smooth);
-}
-
-.btn-whatsapp-booking:hover {
-    background: #20ba56;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
-}
-
-.action-caption {
-    font-size: 0.72rem;
-    color: var(--text-muted);
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    margin-top: 12px;
-}
 
 /* 10. GALLERY / PORTFOLIO SHOWCASE
     ========================================================================== */

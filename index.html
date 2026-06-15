@@ -28,7 +28,6 @@
                 <a href="#hero" class="logo-link">
                     <img src="images/logo.webp" alt="شعار المعتمد لتجهيز الحفلات" class="logo-img-file">
                     <div class="logo-text">
-                        <span class="brand-title">المعتمد</span>
                         <span class="brand-subtitle">لتجهيز الحفلات والمناسبات</span>
                     </div>
                 </a>
@@ -39,7 +38,6 @@
                     <li><a href="#hero" class="nav-link active" id="nav-home">الرئيسية</a></li>
                     <li><a href="#about" class="nav-link" id="nav-about">من نحن</a></li>
                     <li><a href="#services" class="nav-link" id="nav-services">خدماتنا</a></li>
-                    <li><a href="#estimator" class="nav-link" id="nav-estimator">حاسبة التجهيزات</a></li>
                     <li><a href="#gallery" class="nav-link" id="nav-gallery">المعرض الملكي</a></li>
                     <li><a href="#contact" class="nav-link" id="nav-contact">اتصل بنا</a></li>
                 </ul>
@@ -71,7 +69,7 @@
                 تجهيز كامل للخيام الملكية والأوروبية، المجالس الفخمة، الإضاءة، وأنظمة التبريد المتطورة لكافة الحفلات، الأعراس والمناسبات الوطنية والعائلية في قطر.
             </p>
             <div class="hero-actions-container">
-                <a href="#estimator" class="btn-primary" id="btn-hero-estimate">احسب تكلفة تجهيزك</a>
+                <a href="#contact" class="btn-primary" id="btn-hero-estimate">احجز مناسبتك الآن</a>
                 <a href="#services" class="btn-secondary" id="btn-hero-explore">استكشف خدماتنا</a>
             </div>
         </div>
@@ -289,138 +287,7 @@
         </div>
     </section>
 
-    <!-- Interactive Pricing & Size Estimator -->
-    <section id="estimator" class="estimator-section">
-        <div class="section-container">
-            <div class="estimator-grid">
-                
-                <!-- Estimator Form UI -->
-                <div class="estimator-form-card">
-                    <span class="badge-gold"><i class="fa-solid fa-calculator"></i> حاسبة التجهيزات الذكية</span>
-                    <h2 class="estimator-form-title">خطط لمناسبتك بلمسات مدروسة</h2>
-                    <p class="estimator-form-desc">حدد خياراتك التقريبية للحصول على تقدير فوري لحجم الخيمة والأثاث المطلوب.</p>
-                    
-                    <form id="calc-form" class="calc-form">
-                        
-                        <!-- Event Type Selection -->
-                        <div class="input-group">
-                            <label class="input-label"><i class="fa-solid fa-hashtag"></i> نوع المناسبة</label>
-                            <div class="custom-radio-group">
-                                <label class="radio-label">
-                                    <input type="radio" name="event_type" value="wedding" checked>
-                                    <span class="radio-span">حفل زفاف / أعراس</span>
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="event_type" value="mourning">
-                                    <span class="radio-span">مجلس عزاء / مواساة</span>
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="event_type" value="national">
-                                    <span class="radio-span">مناسبة وطنية / مهرجان</span>
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="event_type" value="family">
-                                    <span class="radio-span">مجلس خاص / عائلي</span>
-                                </label>
-                            </div>
-                        </div>
 
-                        <!-- Expected Guests Slider -->
-                        <div class="input-group">
-                            <div class="slider-header">
-                                <label class="input-label"><i class="fa-solid fa-users"></i> عدد الضيوف المتوقع</label>
-                                <span class="slider-val" id="guests-val">150 ضيف</span>
-                            </div>
-                            <input type="range" id="input-guests" class="range-slider" min="20" max="1000" step="10" value="150">
-                        </div>
-
-                        <!-- Furniture Type -->
-                        <div class="input-group">
-                            <label class="input-label"><i class="fa-solid fa-couch"></i> نوع الجلوس والأثاث المفضل</label>
-                            <select id="input-furniture" class="custom-select">
-                                <option value="royal_chairs">كراسي ملكية مذهبة وطاولات VIP</option>
-                                <option value="sadu_majlis">مجالس سدو تراثية متكاملة</option>
-                                <option value="velvet_sofas">كنب شمواه ومخمل فاخر</option>
-                                <option value="mixed_vip">مزيج ملكي VIP (كنب وكراسي)</option>
-                            </select>
-                        </div>
-
-                        <!-- Add-ons / Extras -->
-                        <div class="input-group">
-                            <label class="input-label"><i class="fa-solid fa-circle-plus"></i> تجهيزات إضافية مطلوبة</label>
-                            <div class="checkbox-grid">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" id="addon-ac" checked>
-                                    <span class="checkbox-span"><i class="fa-solid fa-snowflake"></i> تكييف دولابي فائق</span>
-                                </label>
-                                <label class="checkbox-label">
-                                    <input type="checkbox" id="addon-lights" checked>
-                                    <span class="checkbox-span"><i class="fa-solid fa-lightbulb"></i> ثريات وإضاءة ملكية</span>
-                                </label>
-                                <label class="checkbox-label">
-                                    <input type="checkbox" id="addon-sound">
-                                    <span class="checkbox-span"><i class="fa-solid fa-volume-high"></i> نظام صوتيات ذكي</span>
-                                </label>
-                                <label class="checkbox-label">
-                                    <input type="checkbox" id="addon-hospitality">
-                                    <span class="checkbox-span"><i class="fa-solid fa-mug-hot"></i> خدمة ضيافة وقهوة</span>
-                                </label>
-                            </div>
-                        </div>
-
-                    </form>
-                </div>
-
-                <!-- Estimator Results UI -->
-                <div class="estimator-results-card">
-                    <div class="results-header">
-                        <h3>التقدير الفني الملكي لمناسبتك</h3>
-                        <p>حسب معايير الضيافة والراحة القطرية الفاخرة</p>
-                    </div>
-                    
-                    <div class="results-body">
-                        
-                        <!-- Tent Size Meter -->
-                        <div class="result-item">
-                            <span class="result-label"><i class="fa-solid fa-maximize"></i> حجم الخيمة الموصى به:</span>
-                            <span class="result-value" id="result-tent-size">مساحة 180 متر مربع (12 × 15)</span>
-                        </div>
-                        
-                        <!-- Seating Capacity -->
-                        <div class="result-item">
-                            <span class="result-label"><i class="fa-solid fa-chair"></i> سعة الأثاث المقترحة:</span>
-                            <span class="result-value" id="result-seating">150 مقعد ملكي مع 25 طاولة</span>
-                        </div>
-
-                        <!-- Cooling Units -->
-                        <div class="result-item">
-                            <span class="result-label"><i class="fa-solid fa-snowflake"></i> وحدات التكييف المطلوبة:</span>
-                            <span class="result-value" id="result-ac">4 وحدات تكييف دولابي (5 طن)</span>
-                        </div>
-
-                        <!-- Cost/Service Range -->
-                        <div class="result-item price-item">
-                            <span class="result-label"><i class="fa-solid fa-wallet"></i> النطاق المقدر للتجهيزات:</span>
-                            <div class="price-value-container">
-                                <span class="price-value" id="result-price">جاري الحساب...</span>
-                                <span class="price-note">*السعر شامل التركيب والفك والنقل في الدوحة وضواحيها.</span>
-                            </div>
-                        </div>
-
-                        <!-- Booking Actions -->
-                        <div class="results-action">
-                            <button type="button" class="btn-whatsapp-booking" id="btn-submit-booking">
-                                <i class="fa-brands fa-whatsapp"></i> إرسال هذا التجهيز للواتساب للحجز
-                            </button>
-                            <span class="action-caption"><i class="fa-solid fa-shield-halved"></i> إرسال التفاصيل لا يفرض عليك أي دفع مالي، هو طلب عرض سعر وتوافر فقط.</span>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
 
     <!-- Gallery / Showcase Section -->
     <section id="gallery" class="gallery-section">
@@ -648,7 +515,6 @@
                         <div class="logo-area">
                             <img src="images/logo.webp" alt="شعار المعتمد لتجهيز الحفلات" class="logo-img-file">
                             <div class="logo-text">
-                                <span class="brand-title">المعتمد</span>
                                 <span class="brand-subtitle">لتجهيز الحفلات والمناسبات</span>
                             </div>
                         </div>
@@ -663,7 +529,6 @@
                             <li><a href="#hero">الرئيسية</a></li>
                             <li><a href="#about">من نحن</a></li>
                             <li><a href="#services">خدمات التجهيز</a></li>
-                            <li><a href="#estimator">حاسبة التجهيزات</a></li>
                             <li><a href="#gallery">معرض الصور</a></li>
                         </ul>
                     </div>
